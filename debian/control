@@ -1,0 +1,35 @@
+Source: python-flaskext.babel
+Section: python
+Priority: extra
+Maintainer: Alex Rembish <alex@rembish.org>
+Build-Depends:
+ debhelper (>= 9),
+ python (>= 2.7),
+ python3 (>= 3.3),
+ python-setuptools,
+ python3-setuptools
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.3
+
+Package: python-flaskext.babel
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python:Depends}
+Description: i18n and l10n support to any Flask application
+ Flask-Babel is an extension to Flask that adds i18n and l10n support to
+ any Flask application with the help of babel and pytz.
+ It has builtin support for date formatting with timezone support as well
+ as a very simple and friendly interface to gettext translations.
+
+Package: python3-flaskext.babel
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends}
+Description: i18n and l10n support to any Flask application
+ Flask-Babel is an extension to Flask that adds i18n and l10n support to
+ any Flask application with the help of babel and pytz.
+ It has builtin support for date formatting with timezone support as well
+ as a very simple and friendly interface to gettext translations.

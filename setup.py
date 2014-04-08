@@ -16,26 +16,25 @@ Links
 .. _Babel: http://babel.edgewall.org/
 
 """
-from setuptools import setup
+from os.path import abspath, dirname, join
+from setuptools import find_packages, setup
 
+
+here = dirname(abspath(__file__))
+requirements = join(here, 'requirements.txt')
 
 setup(
     name='Flask-Babel',
-    version='0.10',
+    version='0.11',
     url='http://github.com/mitsuhiko/flask-babel',
     license='BSD',
     author='Armin Ronacher',
     author_email='armin.ronacher@active-4.com',
     description='Adds i18n/l10n support to Flask applications',
     long_description=__doc__,
-    packages=['flask_babel'],
-    zip_safe=False,
+    packages=find_packages(),
     platforms='any',
-    install_requires=[
-        'Flask',
-        'Babel>=1.0',
-        'Jinja2>=2.5'
-    ],
+    install_requires=open(requirements).readlines(),
     extras_require={
         'laziness': ['speaklater>=1.2']
     },
